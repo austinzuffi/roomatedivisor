@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBAbvLb0X3p1AxYeBb2fZhGZPP0JtTNqNw",
+    authDomain: "roommate-divisor.firebaseapp.com",
+    databaseURL: "https://roommate-divisor.firebaseio.com",
+    projectId: "roommate-divisor",
+    storageBucket: "roommate-divisor.appspot.com",
+    messagingSenderId: "908319956376"
+  }
 };
