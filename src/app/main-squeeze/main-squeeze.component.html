@@ -1,10 +1,20 @@
-<button (click)="onClickMinus();">
+<button mat-button (click)="onClickMinus();">
     <mat-icon svgIcon="fast_rewind" aria-hidden="true"></mat-icon>
 </button>
 num rooms:  {{numRooms}}
-<button (click)="onClickPlus()">
+<button mat-button (click)="onClickPlus()">
     <mat-icon svgIcon="fast_forward" aria-hidden="true"></mat-icon>
 </button>
-<div *ngFor="let room of allTheRooms">
-    <p>room! length {{room.length}} width {{room.width}} sqFeet {{room.sqFeet}}</p>
+<div *ngFor="let room of allTheRooms; let i = index">
+    <form>
+        <mat-form-field>
+            <input matInput name="width" placeholder="room width" [(ngModel)]="allTheRooms[i].width">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="length" placeholder="room length" value={{room.length}}>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="sqFeet" placeholder="square feet" value={{room.sqFeet}}>
+        </mat-form-field>
+    </form>
 </div>
